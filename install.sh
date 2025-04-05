@@ -16,9 +16,8 @@ curl -fsSL https://bun.sh/install | bash
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-echo ">>> Downloading kuzco installer..."
-curl -fsSL https://raw.githubusercontent.com/danielgross/kuzco/main/install.sh -o setup-kuzco.sh
-bash setup-kuzco.sh
+echo ">>> Downloading & Installing Kuzco CLI..."
+curl -fsSL https://inference.supply/install.sh | sh
 
 echo ">>> Menjalankan worker di screen..."
 screen -dmS kuzco-worker bash -c "kuzco worker start --worker 9_FMvrayCUk08zT9Kn3 --code 8c13928-beae-43b5-b259-3471361f0657"
